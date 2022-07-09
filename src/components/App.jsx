@@ -16,7 +16,7 @@ export class App extends Component {
   percentagePositiveFeedback = () =>
     Math.round((this.state.good / this.TotalFeedback()) * 100);
 
-  onFeedbackHandle = evt => {
+  FeedbackHandle = evt => {
     const stateName = evt.currentTarget.name;
     this.setState(prev => ({ [stateName]: prev[stateName] + 1 }));
   };
@@ -27,10 +27,7 @@ export class App extends Component {
     return (
       <div>
         <Section title="Please leave feedback">
-          <Feedback
-            options={this.btns()}
-            LeaveFeedback={this.onFeedbackHandle}
-          />
+          <Feedback options={this.btns()} LeaveFeedback={this.FeedbackHandle} />
         </Section>
 
         <Section title="Statistics">
