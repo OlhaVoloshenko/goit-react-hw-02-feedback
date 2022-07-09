@@ -18,5 +18,7 @@ export const Options = styled.button`
     border-radius: 4px;
     border-color: orange;
     color: white;
+
+    cursor: pointer;
   }
 `;
