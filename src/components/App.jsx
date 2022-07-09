@@ -27,7 +27,7 @@ export class App extends Component {
     return (
       <div>
         <Section title="Please leave feedback">
-          <Feedback options={this.btns()} LeaveFeedback={this.FeedbackHandle} />
+          <Feedback options={this.btns()} leaveFeedback={this.FeedbackHandle} />
         </Section>
 
         <Section title="Statistics">
