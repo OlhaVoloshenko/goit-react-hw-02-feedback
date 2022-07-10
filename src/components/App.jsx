@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import Dropdown from './Dropdown';
-import Feedback from './Feedback';
+import Statistics from './Statistics';
+import FeedbackOptions from './Feedback';
 import Section from './Section';
 import Notification from './Notification';
 
@@ -29,14 +29,14 @@ export class App extends Component {
     return (
       <div>
         <Section title="Please leave feedback">
-          <Feedback
+          <FeedbackOptions
             options={this.btns()}
-            leaveFeedback={this.FeedbackIncrement}
+            onLeaveFeedback={this.FeedbackIncrement}
           />
         </Section>
         <Section title="Statistics">
           {this.TotalFeedback() ? (
-            <Dropdown
+            <Statistics
               good={good}
               neutral={neutral}
               bad={bad}
