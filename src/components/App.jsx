@@ -16,9 +16,11 @@ export class App extends Component {
   percentagePositiveFeedback = () =>
     Math.round((this.state.good / this.TotalFeedback()) * 100);
 
-  FeedbackHandle = event => {
-    const stateName = event.currentTarget.name;
-    this.setState(prev => ({ [stateName]: prev[stateName] + 1 }));
+  FeedbackIncrement = event => {
+    const currState = event.currentTarget.name;
+    this.setState(curr => ({
+      [currState]: curr[currState] + 1,
+    }));
   };
   btns = () => Object.keys(this.state);
 
@@ -27,9 +29,11 @@ export class App extends Component {
     return (
       <div>
         <Section title="Please leave feedback">
-          <Feedback options={this.btns()} leaveFeedback={this.FeedbackHandle} />
+          <Feedback
+            options={this.btns()}
+            leaveFeedback={this.FeedbackIncrement}
+          />
         </Section>
-
         <Section title="Statistics">
           {this.TotalFeedback() ? (
             <Statistics
