@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export default function Statistics({
+export default function Dropdown({
   good,
   neutral,
   bad,
@@ -18,7 +18,7 @@ export default function Statistics({
   );
 }
 
-Statistics.propTypes = {
+Dropdown.propTypes = {
   good: PropTypes.number,
   neutral: PropTypes.number,
   bad: PropTypes.number,

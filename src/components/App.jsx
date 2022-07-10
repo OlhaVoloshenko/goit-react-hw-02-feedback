@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import Statistics from './Statistics';
+import Dropdown from './Dropdown';
 import Feedback from './Feedback';
 import Section from './Section';
 import Notification from './Notification';
@@ -36,7 +36,7 @@ export class App extends Component {
         </Section>
         <Section title="Statistics">
           {this.TotalFeedback() ? (
-            <Statistics
+            <Dropdown
               good={good}
               neutral={neutral}
               bad={bad}
